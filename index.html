@@ -1,0 +1,127 @@
+ <!DOCTYPE html>
+<!-- Template by html.am -->
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>WVU Solar Tree Statistics</title>
+  
+  <!--Load the Ajax API-->
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script type="text/javascript">
+    
+    // Load the Visualization API and the piechart package.
+    google.load('visualization', '1', {'packages':['corechart']});
+    
+    // Set a callback to run when the Google Visualization API is loaded.
+    google.setOnLoadCallback(drawChart);
+    
+    function drawChart() {
+    
+    //------------------------------Get JSON Data------------------------------------------------
+    var jsonVoltage = $.ajax({
+       url: "getVoltages.php",
+       dataType: "json",
+       async: false
+       }).responseText;
+
+    var jsonCurrent = $.ajax({
+       url: "getCurrents.php",
+       dataType: "json",
+       async: false
+       }).responseText;
+
+    var jsonTemp = $.ajax({
+       url: "getTemps.php",
+       dataType: "json",
+       async: false
+       }).responseText;
+ 
+   var jsonInCurrent = $.ajax({
+       url: "getInCurrents.php",
+       dataType: "json",
+       async: false
+       }).responseText;
+
+    //-------------------------Create Data Tables---------------------------------------------------
+      // Create our data table out of JSON data loaded from server.
+    //-----Battery Voltage-----  
+    var dataVoltage = new google.visualization.DataTable(jsonVoltage);
+      var optionsVoltage = {
+           title: 'Battery Voltages',
+          is3D: 'true',
+          width: 1000,
+          height: 600,
+          vAxis: {title: 'Voltage [V]'},
+          hAxis: {title: 'Time'},
+          legend: {position: 'bottom'}
+        };
+
+    //-----AC Output Current-----
+    var dataCurrent = new google.visualization.DataTable(jsonCurrent);
+    var optionsCurrent = {
+         title: 'AC Output Current',
+         is3D: 'true',
+         width: 1000,
+         height: 600,
+         vAxis: {title: 'Amps [A]'},
+         hAxis: {title: 'Time'},
+         legend: {position: 'bottom'}
+        };
+    
+    //-----Heatsink Temperature-----
+    var dataTemp = new google.visualization.DataTable(jsonTemp);
+    var optionsTemp = {
+         title: 'Heatsink Temperature',
+         is3D: 'true',
+         width: 1000,
+         height: 600,
+         vAxis: {title: 'Temperature [*C]'},
+         hAxis: {title: 'Time'},
+         legend: {position: 'bottom'}
+        };
+    
+    //-----Solar Generated Current-----
+    var dataInCurrent = new google.visualization.DataTable(jsonInCurrent);
+    var optionsInCurrent = {
+         title: 'Solar Generated Current',
+         is3D: 'true',
+         width: 1000,
+         height: 600,
+         vAxis: {title: 'Current [A]'},
+         hAxis: {title: 'Time'},
+         legend: {position: 'bottom'}
+        };
+
+    //--------------------------------Create Charts---------------------------------------------
+      // Instantiate and draw our chart, passing in some options.
+      // Do not forget to check your div ID
+     
+      var voltage_chart = new google.visualization.LineChart(document.getElementById('voltage_chart'));
+      voltage_chart.draw(dataVoltage, optionsVoltage);
+
+      var current_chart = new google.visualization.LineChart(document.getElementById('current_chart'));
+      current_chart.draw(dataCurrent, optionsCurrent);
+
+      var temp_chart = new google.visualization.LineChart(document.getElementById('temp_chart'));
+      temp_chart.draw(dataTemp, optionsTemp);
+
+      var in_current_chart = new google.visualization.LineChart(document.getElementById('in_current_chart'));
+      in_current_chart.draw(dataInCurrent, optionsInCurrent);
+
+    }
+    </script>
+  </head>
+
+  <body>
+    <!--this is the div that will hold the pie chart-->
+    <div id="voltage_chart" style="width: 600px; margin:0 auto;">
+    </div>
+    <div id="current_chart" style="width: 600px; margin:0 auto;">
+    </div>
+    <div id="temp_chart" style="width: 600px; margin:0 auto;">
+    </div>
+    <div id="in_current_chart" style="width: 600px; margin:0 auto;">
+    </div>
+  </body>
+</html>

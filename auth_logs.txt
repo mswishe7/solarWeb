@@ -1,0 +1,213 @@
+May  6 23:29:39 raspberrypi login[2529]: pam_unix(login:session): session opened for user root by (uid=0)
+May  6 23:29:39 raspberrypi login[2536]: ROOT LOGIN  on '/dev/tty1'
+May  6 23:29:54 raspberrypi sshd[2589]: Server listening on 0.0.0.0 port 22.
+May  6 23:31:51 raspberrypi sshd[2589]: Received signal 15; terminating.
+May  6 23:31:55 solartree sshd[2259]: Server listening on 0.0.0.0 port 22.
+May  6 23:32:53 solartree login[2320]: pam_unix(login:auth): authentication failure; logname=LOGIN uid=0 euid=0 tty=/dev/tty1 ruser= rhost=  user=root
+May  6 23:32:56 solartree login[2320]: FAILED LOGIN (1) on '/dev/tty1' FOR 'root', Authentication failure
+May  6 23:33:00 solartree login[2320]: pam_unix(login:auth): check pass; user unknown
+May  6 23:33:00 solartree login[2320]: pam_unix(login:auth): authentication failure; logname=LOGIN uid=0 euid=0 tty=/dev/tty1 ruser= rhost= 
+May  6 23:33:04 solartree login[2320]: FAILED LOGIN (2) on '/dev/tty1' FOR 'UNKNOWN', Authentication failure
+May  6 23:37:08 solartree login[2327]: pam_unix(login:session): session opened for user pi by LOGIN(uid=0)
+May  6 23:37:28 solartree polkitd(authority=local): Registered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session1 (system bus name :1.6 [/usr/lib/arm-linux-gnueabihf/lxpolkit], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_GB.UTF-8)
+May  6 23:38:17 solartree sudo:       pi : TTY=pts/0 ; PWD=/home/pi ; USER=root ; COMMAND=/bin/ls
+May  6 23:38:17 solartree sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+May  6 23:38:17 solartree sudo: pam_unix(sudo:session): session closed for user root
+May  6 23:38:40 solartree sudo:       pi : TTY=pts/0 ; PWD=/home/pi ; USER=root ; COMMAND=/usr/bin/passwd root
+May  6 23:38:40 solartree sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+May  6 23:39:29 solartree passwd[2568]: pam_unix(passwd:chauthtok): password changed for root
+May  6 23:39:29 solartree sudo: pam_unix(sudo:session): session closed for user root
+May  6 23:39:40 solartree sudo:       pi : TTY=pts/0 ; PWD=/home/pi ; USER=root ; COMMAND=/usr/bin/passwd root
+May  6 23:39:40 solartree sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+May  6 23:39:43 solartree passwd[2570]: pam_unix(passwd:chauthtok): password changed for root
+May  6 23:39:43 solartree sudo: pam_unix(sudo:session): session closed for user root
+May  6 23:39:50 solartree su[2571]: Successful su for root by pi
+May  6 23:39:50 solartree su[2571]: + /dev/pts/0 pi:root
+May  6 23:39:50 solartree su[2571]: pam_unix(su:session): session opened for user root by pi(uid=1000)
+Oct  2 20:19:11 solartree sshd[2640]: Accepted password for root from 172.16.114.229 port 9854 ssh2
+Oct  2 20:19:11 solartree sshd[2640]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Oct  2 20:19:44 solartree sudo:     root : TTY=pts/1 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/apt-get install wall
+Oct  2 20:19:44 solartree sudo: pam_unix(sudo:session): session opened for user root by root(uid=0)
+Oct  2 20:19:46 solartree sudo: pam_unix(sudo:session): session closed for user root
+Oct  2 20:20:35 solartree sshd[2640]: pam_unix(sshd:session): session closed for user root
+Oct  2 21:07:36 solartree sudo:     root : TTY=pts/0 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/apt-get install apache2
+Oct  2 21:07:36 solartree sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Oct  2 21:07:42 solartree sudo: pam_unix(sudo:session): session closed for user root
+Oct  2 21:07:54 solartree sudo:     root : TTY=pts/0 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/apt-get update
+Oct  2 21:07:54 solartree sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Oct  2 21:10:03 solartree sudo: pam_unix(sudo:session): session closed for user root
+Oct  2 21:10:56 solartree sudo:     root : TTY=pts/0 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/apt-get install apache2
+Oct  2 21:10:56 solartree sudo: pam_unix(sudo:session): session opened for user root by pi(uid=0)
+Oct  2 21:12:24 solartree groupadd[3940]: group added to /etc/group: name=ssl-cert, GID=111
+Oct  2 21:12:24 solartree groupadd[3940]: group added to /etc/gshadow: name=ssl-cert
+Oct  2 21:12:24 solartree groupadd[3940]: new group: name=ssl-cert, GID=111
+Oct  2 21:12:40 solartree sudo: pam_unix(sudo:session): session closed for user root
+Oct  2 21:17:01 solartree CRON[4005]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  2 21:17:01 solartree CRON[4005]: pam_unix(cron:session): session closed for user root
+Oct  2 22:17:01 solartree CRON[4020]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  2 22:17:01 solartree CRON[4020]: pam_unix(cron:session): session closed for user root
+Oct  2 23:17:01 solartree CRON[4031]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  2 23:17:01 solartree CRON[4031]: pam_unix(cron:session): session closed for user root
+Oct  3 00:17:01 solartree CRON[4046]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  3 00:17:01 solartree CRON[4046]: pam_unix(cron:session): session closed for user root
+Oct  3 01:17:01 solartree CRON[4061]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  3 01:17:01 solartree CRON[4061]: pam_unix(cron:session): session closed for user root
+Oct  3 02:17:01 solartree CRON[4074]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  3 02:17:01 solartree CRON[4074]: pam_unix(cron:session): session closed for user root
+Oct  3 02:17:21 solartree sshd[2429]: Server listening on 0.0.0.0 port 22.
+Oct  4 17:25:35 solartree login[2491]: pam_unix(login:auth): check pass; user unknown
+Oct  4 17:25:35 solartree login[2491]: pam_unix(login:auth): authentication failure; logname=LOGIN uid=0 euid=0 tty=/dev/tty1 ruser= rhost= 
+Oct  4 17:25:38 solartree login[2491]: FAILED LOGIN (1) on '/dev/tty1' FOR 'UNKNOWN', Authentication failure
+Oct  4 17:25:43 solartree login[2491]: pam_unix(login:auth): check pass; user unknown
+Oct  4 17:25:43 solartree login[2491]: pam_unix(login:auth): authentication failure; logname=LOGIN uid=0 euid=0 tty=/dev/tty1 ruser= rhost= 
+Oct  4 17:25:46 solartree login[2491]: FAILED LOGIN (2) on '/dev/tty1' FOR 'UNKNOWN', Authentication failure
+Oct  4 17:25:52 solartree login[2491]: pam_unix(login:session): session opened for user root by LOGIN(uid=0)
+Oct  4 17:25:52 solartree login[2498]: ROOT LOGIN  on '/dev/tty1'
+Oct  4 17:26:52 solartree sudo:     root : TTY=tty1 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/apt-get install python
+Oct  4 17:26:52 solartree sudo: pam_unix(sudo:session): session opened for user root by root(uid=0)
+Oct  4 17:26:55 solartree sudo: pam_unix(sudo:session): session closed for user root
+Oct  4 17:29:20 solartree sudo:     root : TTY=tty1 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/apt-get install python-django
+Oct  4 17:29:20 solartree sudo: pam_unix(sudo:session): session opened for user root by root(uid=0)
+Oct  4 17:31:28 solartree sudo: pam_unix(sudo:session): session closed for user root
+Oct  4 17:41:28 solartree polkitd(authority=local): Registered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session1 (system bus name :1.6 [/usr/lib/arm-linux-gnueabihf/lxpolkit], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_GB.UTF-8)
+Oct  4 17:45:32 solartree sudo:     root : TTY=pts/1 ; PWD=/home/solartree/statistics/statistics ; USER=root ; COMMAND=/usr/bin/apt-get install emacs
+Oct  4 17:45:32 solartree sudo: pam_unix(sudo:session): session opened for user root by root(uid=0)
+Oct  4 17:49:20 solartree sudo: pam_unix(sudo:session): session closed for user root
+Oct  4 17:57:43 solartree sudo:     root : TTY=pts/1 ; PWD=/home/solartree/statistics ; USER=root ; COMMAND=/usr/bin/apt-get install mysql
+Oct  4 17:57:43 solartree sudo: pam_unix(sudo:session): session opened for user root by root(uid=0)
+Oct  4 17:57:45 solartree sudo: pam_unix(sudo:session): session closed for user root
+Oct  4 17:58:46 solartree sudo:     root : TTY=pts/1 ; PWD=/home/solartree/statistics ; USER=root ; COMMAND=/usr/bin/apt-get install mysql
+Oct  4 17:58:46 solartree sudo: pam_unix(sudo:session): session opened for user root by root(uid=0)
+Oct  4 17:58:48 solartree sudo: pam_unix(sudo:session): session closed for user root
+Oct  4 17:59:29 solartree sudo:     root : TTY=pts/1 ; PWD=/home/solartree/statistics ; USER=root ; COMMAND=/usr/bin/apt-get install mysqlclient
+Oct  4 17:59:29 solartree sudo: pam_unix(sudo:session): session opened for user root by root(uid=0)
+Oct  4 17:59:31 solartree sudo: pam_unix(sudo:session): session closed for user root
+Oct  4 18:00:20 solartree sudo:     root : TTY=pts/1 ; PWD=/home/solartree/statistics ; USER=root ; COMMAND=/usr/bin/apt-get update
+Oct  4 18:00:20 solartree sudo: pam_unix(sudo:session): session opened for user root by root(uid=0)
+Oct  4 18:02:43 solartree sudo: pam_unix(sudo:session): session closed for user root
+Oct  4 18:03:01 solartree sudo:     root : TTY=pts/1 ; PWD=/home/solartree/statistics ; USER=root ; COMMAND=/usr/bin/apt-get upgrade
+Oct  4 18:03:01 solartree sudo: pam_unix(sudo:session): session opened for user root by root(uid=0)
+Oct  4 18:17:01 solartree CRON[4618]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  4 18:17:01 solartree CRON[4618]: pam_unix(cron:session): session closed for user root
+Oct  4 18:38:04 solartree sudo: pam_unix(sudo:session): session closed for user root
+Oct  4 18:58:59 solartree groupadd[10211]: group added to /etc/group: name=mysql, GID=112
+Oct  4 18:58:59 solartree groupadd[10211]: group added to /etc/gshadow: name=mysql
+Oct  4 18:58:59 solartree groupadd[10211]: new group: name=mysql, GID=112
+Oct  4 18:58:59 solartree useradd[10217]: new user: name=mysql, UID=108, GID=112, home=/nonexistent, shell=/bin/false
+Oct  4 18:59:00 solartree chage[10222]: changed password expiry for mysql
+Oct  4 18:59:00 solartree chfn[10225]: changed user 'mysql' information
+Oct  4 19:13:07 solartree sudo:     root : TTY=pts/1 ; PWD=/home/solartree/statistics ; USER=root ; COMMAND=/usr/bin/apt-get install apache2
+Oct  4 19:13:07 solartree sudo: pam_unix(sudo:session): session opened for user root by root(uid=0)
+Oct  4 19:13:10 solartree sudo: pam_unix(sudo:session): session closed for user root
+Oct  4 19:17:01 solartree CRON[13036]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  4 19:17:01 solartree CRON[13036]: pam_unix(cron:session): session closed for user root
+Oct  4 20:17:01 solartree CRON[13049]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  4 20:17:01 solartree CRON[13049]: pam_unix(cron:session): session closed for user root
+Oct  4 20:47:57 solartree sudo:     root : TTY=pts/1 ; PWD=/home/solartree/statistics ; USER=root ; COMMAND=/usr/bin/apt-get install bash-completion
+Oct  4 20:47:57 solartree sudo: pam_unix(sudo:session): session opened for user root by root(uid=0)
+Oct  4 20:48:00 solartree sudo: pam_unix(sudo:session): session closed for user root
+Oct  4 20:48:11 solartree sudo:     root : TTY=pts/1 ; PWD=/home/solartree/statistics ; USER=root ; COMMAND=/usr/bin/apt-get install --reinstall bash-completion
+Oct  4 20:48:11 solartree sudo: pam_unix(sudo:session): session opened for user root by root(uid=0)
+Oct  4 20:48:49 solartree sudo: pam_unix(sudo:session): session closed for user root
+Oct  4 20:51:47 solartree sudo:     root : TTY=tty1 ; PWD=/home/solartree/statistics ; USER=root ; COMMAND=/sbin/reboot
+Oct  4 20:51:47 solartree sudo: pam_unix(sudo:session): session opened for user root by root(uid=0)
+Oct  4 20:51:54 solartree sudo: pam_unix(sudo:session): session closed for user root
+Oct  4 20:51:54 solartree polkitd(authority=local): Unregistered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session1 (system bus name :1.6, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_GB.UTF-8) (disconnected from bus)
+Oct  4 20:52:05 solartree sshd[2429]: Received signal 15; terminating.
+Oct  4 20:52:18 solartree sshd[2472]: Server listening on 0.0.0.0 port 22.
+Oct  4 20:53:39 solartree login[3025]: pam_unix(login:session): session opened for user root by LOGIN(uid=0)
+Oct  4 20:53:39 solartree login[3117]: ROOT LOGIN  on '/dev/tty1'
+Oct  4 20:53:51 solartree polkitd(authority=local): Registered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session1 (system bus name :1.6 [/usr/lib/arm-linux-gnueabihf/lxpolkit], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_GB.UTF-8)
+Oct  4 20:58:08 solartree sudo:     root : TTY=pts/0 ; PWD=/etc ; USER=root ; COMMAND=/usr/bin/emacs -nw /etc/default/keyboard
+Oct  4 20:58:08 solartree sudo: pam_unix(sudo:session): session opened for user root by root(uid=0)
+Oct  4 20:58:34 solartree sudo: pam_unix(sudo:session): session closed for user root
+Oct  4 20:58:45 solartree sudo:     root : TTY=tty1 ; PWD=/root ; USER=root ; COMMAND=/sbin/reboot
+Oct  4 20:58:45 solartree sudo: pam_unix(sudo:session): session opened for user root by root(uid=0)
+Oct  4 20:58:46 solartree polkitd(authority=local): Unregistered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session1 (system bus name :1.6, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_GB.UTF-8) (disconnected from bus)
+Oct  4 20:58:46 solartree sudo: pam_unix(sudo:session): session closed for user root
+Oct  4 20:58:58 solartree sshd[2472]: Received signal 15; terminating.
+Oct  4 20:59:19 solartree sshd[2581]: Server listening on 0.0.0.0 port 22.
+Oct  4 21:00:14 solartree login[3101]: pam_unix(login:session): session opened for user root by LOGIN(uid=0)
+Oct  4 21:00:14 solartree login[3189]: ROOT LOGIN  on '/dev/tty1'
+Oct  4 21:00:24 solartree polkitd(authority=local): Registered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session1 (system bus name :1.6 [/usr/lib/arm-linux-gnueabihf/lxpolkit], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_GB.UTF-8)
+Oct  4 21:05:36 solartree sudo:     root : TTY=pts/0 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/apt-get install mysqlclient
+Oct  4 21:05:36 solartree sudo: pam_unix(sudo:session): session opened for user root by root(uid=0)
+Oct  4 21:05:38 solartree sudo: pam_unix(sudo:session): session closed for user root
+Oct  4 21:05:44 solartree sudo:     root : TTY=pts/0 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/apt-get install mysqldb
+Oct  4 21:05:44 solartree sudo: pam_unix(sudo:session): session opened for user root by root(uid=0)
+Oct  4 21:05:46 solartree sudo: pam_unix(sudo:session): session closed for user root
+Oct  4 21:17:02 solartree CRON[4827]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  4 21:17:03 solartree CRON[4827]: pam_unix(cron:session): session closed for user root
+Oct  4 21:39:01 solartree CRON[4868]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  4 21:39:01 solartree CRON[4868]: pam_unix(cron:session): session closed for user root
+Oct  4 22:09:01 solartree CRON[4898]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  4 22:09:02 solartree CRON[4898]: pam_unix(cron:session): session closed for user root
+Oct  4 22:17:01 solartree CRON[4920]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  4 22:17:01 solartree CRON[4920]: pam_unix(cron:session): session closed for user root
+Oct  4 22:39:01 solartree CRON[4938]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  4 22:39:01 solartree CRON[4938]: pam_unix(cron:session): session closed for user root
+Oct  4 23:09:01 solartree CRON[4969]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  4 23:09:02 solartree CRON[4969]: pam_unix(cron:session): session closed for user root
+Oct  4 23:17:01 solartree CRON[4991]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  4 23:17:01 solartree CRON[4991]: pam_unix(cron:session): session closed for user root
+Oct  4 23:39:01 solartree CRON[5011]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  4 23:39:01 solartree CRON[5011]: pam_unix(cron:session): session closed for user root
+Oct  5 00:09:01 solartree CRON[5040]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  5 00:09:01 solartree CRON[5040]: pam_unix(cron:session): session closed for user root
+Oct  5 00:17:01 solartree CRON[5062]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  5 00:17:01 solartree CRON[5062]: pam_unix(cron:session): session closed for user root
+Oct  5 00:39:01 solartree CRON[5081]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  5 00:39:02 solartree CRON[5081]: pam_unix(cron:session): session closed for user root
+Oct  5 01:09:01 solartree CRON[5111]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  5 01:09:01 solartree CRON[5111]: pam_unix(cron:session): session closed for user root
+Oct  5 01:17:01 solartree CRON[5133]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  5 01:17:01 solartree CRON[5133]: pam_unix(cron:session): session closed for user root
+Oct  5 01:39:01 solartree CRON[5151]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  5 01:39:02 solartree CRON[5151]: pam_unix(cron:session): session closed for user root
+Oct  5 02:09:01 solartree CRON[5182]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  5 02:09:01 solartree CRON[5182]: pam_unix(cron:session): session closed for user root
+Oct  5 02:17:01 solartree CRON[5206]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  5 02:17:01 solartree CRON[5206]: pam_unix(cron:session): session closed for user root
+Oct  5 02:39:01 solartree CRON[5223]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  5 02:39:01 solartree CRON[5223]: pam_unix(cron:session): session closed for user root
+Oct  5 03:09:01 solartree CRON[5251]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  5 03:09:02 solartree CRON[5251]: pam_unix(cron:session): session closed for user root
+Oct  5 03:17:01 solartree CRON[5273]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  5 03:17:01 solartree CRON[5273]: pam_unix(cron:session): session closed for user root
+Oct  5 03:39:01 solartree CRON[5292]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  5 03:39:01 solartree CRON[5292]: pam_unix(cron:session): session closed for user root
+Oct  5 04:09:01 solartree CRON[5324]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  5 04:09:02 solartree CRON[5324]: pam_unix(cron:session): session closed for user root
+Oct  5 04:17:01 solartree CRON[5347]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  5 04:17:01 solartree CRON[5347]: pam_unix(cron:session): session closed for user root
+Oct  5 04:39:01 solartree CRON[5366]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  5 04:39:01 solartree CRON[5366]: pam_unix(cron:session): session closed for user root
+Oct  5 04:17:16 solartree sshd[2398]: Server listening on 0.0.0.0 port 22.
+Oct  5 04:17:29 solartree login[2926]: pam_unix(login:session): session opened for user root by LOGIN(uid=0)
+Oct  5 04:17:29 solartree login[3015]: ROOT LOGIN  on '/dev/tty1'
+Oct  5 04:17:39 solartree polkitd(authority=local): Registered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session1 (system bus name :1.6 [/usr/lib/arm-linux-gnueabihf/lxpolkit], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_GB.UTF-8)
+Oct  5 04:20:28 solartree sudo:     root : TTY=tty1 ; PWD=/root ; USER=root ; COMMAND=/sbin/reboot
+Oct  5 04:20:28 solartree sudo: pam_unix(sudo:session): session opened for user root by root(uid=0)
+Oct  5 04:20:30 solartree sudo: pam_unix(sudo:session): session closed for user root
+Oct  5 04:20:30 solartree polkitd(authority=local): Unregistered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session1 (system bus name :1.6, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_GB.UTF-8) (disconnected from bus)
+Oct  5 04:20:38 solartree sshd[2398]: Received signal 15; terminating.
+Oct  5 04:20:43 solartree sshd[2359]: Server listening on 0.0.0.0 port 22.
+Oct  5 04:21:01 solartree login[2979]: pam_unix(login:session): session opened for user root by LOGIN(uid=0)
+Oct  5 04:21:01 solartree login[3069]: ROOT LOGIN  on '/dev/tty1'
+Oct  5 04:21:20 solartree polkitd(authority=local): Registered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session1 (system bus name :1.6 [/usr/lib/arm-linux-gnueabihf/lxpolkit], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_GB.UTF-8)
+Oct  7 20:39:01 solartree CRON[3505]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  7 20:39:01 solartree CRON[3505]: pam_unix(cron:session): session closed for user root
+Oct  5 04:20:53 solartree sshd[2410]: Server listening on 0.0.0.0 port 22.
+Oct  7 20:50:00 solartree login[2931]: pam_unix(login:session): session opened for user root by LOGIN(uid=0)
+Oct  7 20:50:00 solartree login[3024]: ROOT LOGIN  on '/dev/tty1'
+Oct  7 20:50:12 solartree polkitd(authority=local): Registered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session1 (system bus name :1.6 [/usr/lib/arm-linux-gnueabihf/lxpolkit], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_GB.UTF-8)
+Oct  7 21:09:01 solartree CRON[4244]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  7 21:09:01 solartree CRON[4244]: pam_unix(cron:session): session closed for user root
+Oct  7 21:17:01 solartree CRON[4402]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  7 21:17:01 solartree CRON[4402]: pam_unix(cron:session): session closed for user root
+Oct  7 21:17:24 solartree sshd[2486]: Server listening on 0.0.0.0 port 22.
+Oct  8 22:35:15 solartree login[2994]: pam_unix(login:session): session opened for user root by LOGIN(uid=0)
+Oct  8 22:35:15 solartree login[3087]: ROOT LOGIN  on '/dev/tty1'
+Oct  8 22:35:26 solartree polkitd(authority=local): Registered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session1 (system bus name :1.6 [/usr/lib/arm-linux-gnueabihf/lxpolkit], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_GB.UTF-8)
+Oct  8 22:39:01 solartree CRON[3624]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  8 22:39:02 solartree CRON[3624]: pam_unix(cron:session): session closed for user root

@@ -1,0 +1,29 @@
+<?php 
+      $dbhost="localhost";
+      $dblogin="root";
+      $dbpwd="solar";
+      $dbname="solar_tree";
+
+      $db = mysql_connect($dbhost, $dblogin, $dbpwd);
+      mysql_select_db($dbname);
+
+      $SQLString = "SELECT BatteryVoltageUnfiltered, BatteryVoltageSlowFiltered FROM stats";
+      $result = mysql_query($SQLString);
+      $num = mysql_num_rows($result);
+      if($num > 200)
+      {
+	$num = 200;
+	}
+	
+	$data[0] = array('voltageUnfiltered','voltageFiltered');
+	for ($i=1; $i<($num-1); $i++)
+	{
+		$data[$i] = array( (float) mysql_result($result, $i-1, 'voltageUnfiltered'),
+			    	   (float) mysql_result($result, $i-1, 'voltageFiltered'));
+				   }
+	echo $num;
+	echo json_encode($data);
+	mysql_close($db);
+?>	
+
+	  
